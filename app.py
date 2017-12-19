@@ -31,13 +31,13 @@ def makeWebhookResult(req):
     if req.get("result").get("action") != "crypto.price":
         return {}
     result = req.get("result")
-    parameters = result.get("parameters")
-    crypto = parameters.get("crypto_name")
+    #parameters = result.get("parameters")
+    #crypto = parameters.get("crypto_name")
 
-    cost = {'bitcoin': 100, 'ethereum': 200, 'litecoin': 300, 'ripple': 400, 'monero': 500}
+    #cost = {'bitcoin': 100, 'ethereum': 200, 'litecoin': 300, 'ripple': 400, 'monero': 500}
 
-    speech = "The price of " + crypto + " is " + str(cost[crypto]) + " dollar."
-
+    #speech = "The price of " + crypto + " is " + str(cost[crypto]) + " dollar."
+    speech = 'hi'
     print("Response:")
     print(speech)
 
