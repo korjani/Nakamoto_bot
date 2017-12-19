@@ -28,16 +28,16 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    #if req.get("result").get("action") != "crypto.price":
-    #    return {}
-    #result = req.get("result")
-    #parameters = result.get("parameters")
-    #crypto = parameters.get("crypto_name")
+    if req.get("result").get("action") != "cryptoprice":
+        return {}
+    result = req.get("result")
+    parameters = result.get("parameters")
+    crypto = parameters.get("crypto_name")
 
-    #cost = {'bitcoin': 100, 'ethereum': 200, 'litecoin': 300, 'ripple': 400, 'monero': 500}
+    cost = {'bitcoin': 100, 'ethereum': 200, 'litecoin': 300, 'ripple': 400, 'monero': 500}
 
-    #speech = "The price of " + crypto + " is " + str(cost[crypto]) + " dollar."
-    speech = 'hi'
+    speech = "The price of " + crypto + " is " + str(cost[crypto]) + " dollar."
+
     print("Response:")
     print(speech)
 
@@ -51,6 +51,6 @@ def makeWebhookResult(req):
 
 
 if __name__ == '__main__':
-    port = int(os.getenv('PORT', 80))
+    port = int(os.getenv('PORT', 5000))
 
     app.run(debug=False, port=port, host='0.0.0.0')
