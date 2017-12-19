@@ -46,11 +46,11 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "source": "korjani"
+        "source": "Nakamoto_bot"
     }
 
 
 if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
+    port = int(os.getenv('PORT', 80))
 
-    app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=True, port=port, host='0.0.0.0')
