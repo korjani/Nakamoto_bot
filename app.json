@@ -1,7 +1,7 @@
 {
   "name": "Nakamoto bitcoin chatbot",
   "description": "bitcoin chatbot",
-  "repository": "",
+  "repository": "git@github.com:korjani/Nakamoto_bot.git",
   "logo": "",
   "keywords": ["bitcoin", "chatbot", "crypto", "cryptocurrecny","natural language"]
 }
